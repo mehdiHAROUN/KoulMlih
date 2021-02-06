@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoulMlihBack", "KoulMlihBack\KoulMlihBack.csproj", "{A83623B8-D21A-4A65-8421-E4383392C3E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KoulMlihTest", "KoulMlihTest\KoulMlihTest.csproj", "{81A82C43-C4F2-443A-BF2B-5C89032ADB69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A83623B8-D21A-4A65-8421-E4383392C3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A83623B8-D21A-4A65-8421-E4383392C3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A83623B8-D21A-4A65-8421-E4383392C3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A83623B8-D21A-4A65-8421-E4383392C3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A82C43-C4F2-443A-BF2B-5C89032ADB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A82C43-C4F2-443A-BF2B-5C89032ADB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A82C43-C4F2-443A-BF2B-5C89032ADB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A82C43-C4F2-443A-BF2B-5C89032ADB69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E430B92D-45D6-4113-AA94-0217D030F82A}
+	EndGlobalSection
+EndGlobal
