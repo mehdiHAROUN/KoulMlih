@@ -26,8 +26,6 @@
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://dtsfarchibin/artifactory/api/nuget/quadra-nuget/": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

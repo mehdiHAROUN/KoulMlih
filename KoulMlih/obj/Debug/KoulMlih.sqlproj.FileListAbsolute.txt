@@ -1,0 +1,5 @@
+C:\codesource\KoulMlih\KoulMlih\bin\Debug\KoulMlih.dacpac
+C:\codesource\KoulMlih\KoulMlih\bin\Debug\KoulMlih.dll
+C:\codesource\KoulMlih\KoulMlih\bin\Debug\KoulMlih.pdb
+C:\codesource\KoulMlih\KoulMlih\obj\Debug\KoulMlih.dll
+C:\codesource\KoulMlih\KoulMlih\obj\Debug\KoulMlih.pdb

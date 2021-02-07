@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using KoulMlihBack.Models;
+using KoulMlihBack.Models.Result.CommonResult;
+using KoulMlihBack.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -11,29 +14,28 @@ namespace YukaBack.Controllers
     [Route("[controller]")]
     public class ProductController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
+        private readonly ILogger<ProductController> _logger;
+        private readonly IProductService _productService;
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public ProductController(ILogger<WeatherForecastController> logger)
+        public ProductController(ILogger<ProductController> logger, IProductService productService)
         {
             _logger = logger;
+            _productService = productService;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("{codeBare}")]
+        public async Task<JsonResult> Get(string codeBare)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            try
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+                Product product = await _productService.GetProductByCodeBar(codeBare);
+                return ModelResult.SuccessModel(product);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Error while retrieving product {codeBare}");
+                return ModelResult.ErrorModel("Erreur lors de la récupération des collaborateurs.");
+            }
         }
     }
 }
