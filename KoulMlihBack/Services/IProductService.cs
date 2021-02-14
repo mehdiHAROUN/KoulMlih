@@ -5,6 +5,6 @@ namespace KoulMlihBack.Services
 {
     public interface IProductService
     {
-        Task<Product> GetProductByCodeBar(string codeBare);
+        DTO.Product GetProductByCodeBar(string codeBare);
     }
 }

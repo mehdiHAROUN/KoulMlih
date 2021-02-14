@@ -28,13 +28,14 @@ namespace YukaBack.Controllers
         {
             try
             {
-                Product product = await _productService.GetProductByCodeBar(codeBare);
+                var product =  _productService.GetProductByCodeBar(codeBare);
                 return ModelResult.SuccessModel(product);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"Error while retrieving product {codeBare}");
-                return ModelResult.ErrorModel("Erreur lors de la récupération des collaborateurs.");
+                var error = $"Error while retrieving product {codeBare}";
+                _logger.LogError(ex, error);
+                return ModelResult.ErrorModel(error);
             }
         }
     }

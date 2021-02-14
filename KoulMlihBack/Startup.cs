@@ -1,4 +1,5 @@
 using KoulMlihBack.Models;
+using AutoMapper;
 using KoulMlihBack.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -23,7 +24,9 @@ namespace YukaBack
         {
             var connection = Configuration.GetConnectionString("KoulMlihDatabase");
             services.AddDbContext<KoulMlihContext>(options => options.UseSqlServer(connection));
-            
+
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddScoped<IProductService, ProductService>();

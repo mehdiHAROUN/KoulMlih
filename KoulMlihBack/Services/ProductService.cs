@@ -1,4 +1,5 @@
-﻿using KoulMlihBack.Models;
+﻿using AutoMapper;
+using KoulMlihBack.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Linq;
@@ -10,20 +11,30 @@ namespace KoulMlihBack.Services
     {
         private readonly ILogger<ProductService> _logger;
         private readonly KoulMlihContext _context;
+        private readonly IMapper _mapper;
 
-        public ProductService(ILogger<ProductService> logger, KoulMlihContext context )
+        public ProductService(ILogger<ProductService> logger, KoulMlihContext context , IMapper mapper)
         {
             _logger = logger;
             _context = context;
+            _mapper = mapper;
         }
 
-        public Task<Product> GetProductByCodeBar(string codeBare)
+        public DTO.Product GetProductByCodeBar(string codeBare)
         {
-            if (string.IsNullOrEmpty( codeBare))
+            if (string.IsNullOrEmpty(codeBare))
             {
                 return null;
             }
-            return _context.Products.FirstOrDefaultAsync(d => d.ProductBarcode == codeBare);
+
+            var productDB =  _context.Products
+                .Include(c => c.ProductIngredients)
+                .ThenInclude(c => c.Ingredient)
+                .FirstOrDefault(d => d.ProductBarcode == codeBare);
+
+            // to do FirstOrDefaultAsync
+
+            return _mapper.Map<DTO.Product>(productDB);
         }
     }
 }
