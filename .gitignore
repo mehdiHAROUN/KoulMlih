@@ -234,3 +234,5 @@ project.lock.json
 *.pdb
 *.pdb
 KoulMlihBack/obj/Debug/netcoreapp3.1/KoulMlihBack.dll
+*.jfm
+*.dbmdl
