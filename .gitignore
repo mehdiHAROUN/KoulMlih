@@ -225,3 +225,12 @@ project.lock.json
 #####
 .vs/KoulMlih/DesignTimeBuild/.dtbcache.v2
 .vs/KoulMlih/v16/.suo
+*.v2
+*.v2
+.vs/KoulMlih/DesignTimeBuild/.dtbcache.v2
+*.dll
+*.dll
+*.exe
+*.pdb
+*.pdb
+KoulMlihBack/obj/Debug/netcoreapp3.1/KoulMlihBack.dll

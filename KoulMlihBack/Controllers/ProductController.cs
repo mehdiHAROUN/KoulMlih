@@ -1,11 +1,8 @@
-﻿using KoulMlihBack.Models;
-using KoulMlihBack.Models.Result.CommonResult;
+﻿using KoulMlihBack.Models.Result.CommonResult;
 using KoulMlihBack.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace YukaBack.Controllers

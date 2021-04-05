@@ -3,3 +3,7 @@ C:\codesource\KoulMlih\KoulMlih\bin\Debug\KoulMlih.dll
 C:\codesource\KoulMlih\KoulMlih\bin\Debug\KoulMlih.pdb
 C:\codesource\KoulMlih\KoulMlih\obj\Debug\KoulMlih.dll
 C:\codesource\KoulMlih\KoulMlih\obj\Debug\KoulMlih.pdb
+C:\codesource\KoulMlih\KoulMlih\obj\Debug\Model.xml
+C:\codesource\KoulMlih\KoulMlih\obj\Debug\refactor.xml
+C:\codesource\KoulMlih\KoulMlih\obj\Debug\postdeploy.sql
+C:\codesource\KoulMlih\KoulMlih\obj\Debug\predeploy.sql
